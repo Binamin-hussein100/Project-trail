@@ -162,6 +162,90 @@ span {
   text-align: center;
   padding: 2%;
 }
+
+#intro2{
+  text-align: center;
+}
+
+#intro3{
+  margin-top: 21%;
+}
+
 #pitch{
   padding: 3%;
+}
+
+
+#row2{
+  border: #000000 0px solid;
+  height: 45vh;
+  border-radius: 1em;
+  box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
+  margin-top: 5%;
+  text-align: center;
+}
+
+#row4{
+  margin-top: 5%;
+  height: 30vh;
+  background-color: #000000;
+  color: white;
+  padding: 3%;
+}
+
+.foot{
+  text-align: center;
+}
+
+#pj{
+  color: #d78383;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.cont1{
+  margin-top: 5%;
+  text-align: center;
+}
+
+#tasks{
+  border: #000000 0px solid;
+  height: 45vh;
+  padding: 1%;
+  border-radius: 1em;
+  box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
+  margin-top: 5%;
+  text-align: center;
+}
+
+#project{
+  border: #000000 0px solid;
+  height: 45vh;
+  padding: 1%;
+  border-radius: 1em;
+  box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
+  margin-top: 5%;
+}
+
+#goals{
+  border: #000000 0px solid;
+  height: 45vh;
+  padding: 1%;
+  border-radius: 1em;
+  box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
+  margin-top: 5%;
+  text-align: center;
+}
+
+#priority{
+  padding: 1%;
+}
+
+#prj{
+  padding: 1%;
+  text-align: center;
+}
+
+ul{
+  list-style-type: none;
 }
