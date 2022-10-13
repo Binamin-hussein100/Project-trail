@@ -109,3 +109,59 @@
 span {
   margin-left: 16px;
 }
+
+/* HomePage */
+.homepView{
+    height: 89vh;
+    position: relative;
+}
+
+#row1{
+  border: #000000 0px solid;
+  height: 60vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin:auto;
+  border-radius: 1em;
+  box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
+}
+
+#display{
+  background-color: #ffffff;
+  border-radius: 0em 1em 1em 0em;
+  color: rgb(19, 28, 65);
+  position: relative;
+
+}
+
+#alliance{
+  color: #ffffff;
+}
+
+#launchD{
+  top:0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  position: absolute;
+  width: 50%;
+  margin-top: 20%;
+}
+
+#logo{
+  color: white;
+  font-weight: 900;
+}
+
+#intro{
+  height: 20vh;  
+  text-align: center;
+  padding: 2%;
+}
+#pitch{
+  padding: 3%;
+}
