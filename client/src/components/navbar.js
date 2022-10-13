@@ -12,10 +12,11 @@ const Navigation = () => {
 
     return (
          <>
-            <div className='navbar'>
+            <div fixed='top' className='navbar'>
                 <Link to='#' className='menu_bars'>
                     <FaIcons.FaBars onClick={showSidebar}/>
                 </Link>
+                <h3 id='logo'>P.ALLIANCE</h3>
             </div>
             <nav className={sidebar ? 'nav-menu active':'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
