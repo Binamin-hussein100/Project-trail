@@ -10,7 +10,7 @@ const Login =()=>{
                 <div className='loginView'>
                     <div className='signin'>
                         <div className='lg'>
-                            <img src={pic2}/>
+                            <img src={pic2} alt='log in'/>
                         </div>
                         <div className='lgForm'>
                             <h3 id='logTitle' className='text-center'>Log in to your Account.</h3>
