@@ -112,28 +112,29 @@ span {
 
 /* HomePage */
 .homepView{
-    min-height:89vh;
-    position: relative;
+    min-height:auto;
+    margin-top: 5%;
+}
+
+#home{
+  padding: 2%;
 }
 
 #row1{
-  border: #000000 0px solid;
-  height: 80%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin:auto;
+  border: #000000 0px solid;  
   border-radius: 1em;
   box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
 }
 
 #display{
   background-color: #ffffff;
-  border-radius: 0em 1em 1em 0em;
   color: rgb(19, 28, 65);
-  position: relative;
+  align-items: center;
+}
+
+#launchD{
+  width: 80%;
+  
 
 }
 
@@ -141,16 +142,23 @@ span {
   color: #ffffff;
 }
 
-#launchD{
-  top:0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
-  margin: auto;
-  position: absolute;
-  width: 50%;
-  margin-top: 20%;
+.optio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+#getStarted{
+  margin: 5%;
+  padding: 4%;
+  
+}
+
+#plan{
+    font-size: 600%;
+    font-weight: bolder;
+    text-shadow: 4px 7px 2px rgba(0,0,0,0.6);
+  }
 
 #logo{
   color: white;
@@ -158,9 +166,12 @@ span {
 }
 
 #intro{
-  height: 20vh;  
-  text-align: center;
-  padding: 2%;
+  height: auto;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  margin-top: 4%;
 }
 
 #intro2{
@@ -181,7 +192,6 @@ span {
   height: 45vh;
   border-radius: 1em;
   box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
-  margin-top: 5%;
   text-align: center;
 }
 
@@ -259,7 +269,64 @@ ul{
   margin-top: 2%;
 }
 
-#signin{
+.signin{
   border: #000000 1px solid;
   border-radius: 1em;
+  width: 20%;
+  height: 65vh;
+  background-color: rgba(0, 0, 0, 0.76);
+
+}
+
+.lg{
+  height: 29%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginView{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+#lgForm{
+  padding: 4%;
+  background-color: white;
+  height: 71%;
+  border-radius: 3em 0em 1em 1em;
+
+}
+
+#signinSub{
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 13%;
+
+}
+
+.formy{
+  margin-top: 10%;
+  height: 60%;
+  padding: 4%;
+}
+
+#dha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+
+}
+
+#logTitle{
+  text-decoration: underline;
+}
+
+
+img{
+  max-width: 100%;
+  max-height: 100%;
 }
