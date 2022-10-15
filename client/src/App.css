@@ -278,6 +278,15 @@ ul{
 
 }
 
+.signup{
+  border: #000000 1px solid;
+  border-radius: 1em;
+  width: 20%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.76);
+
+}
+
 .lg{
   height: 29%;
   display: flex;
@@ -292,7 +301,7 @@ ul{
   height: 90vh;
 }
 
-#lgForm{
+.lgForm{
   padding: 4%;
   background-color: white;
   height: 71%;
