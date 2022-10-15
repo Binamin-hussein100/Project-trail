@@ -16,7 +16,7 @@ const Navigation = () => {
                 <Link to='#' className='menu_bars'>
                     <FaIcons.FaBars onClick={showSidebar}/>
                 </Link>
-                <h3 id='logo'><span id='pj'>Prj</span>ALLIANCE</h3>
+                <h3 id='logo'><span id='pj'>Abo</span>Jani</h3>
             </div>
             <nav className={sidebar ? 'nav-menu active':'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
