@@ -31,19 +31,19 @@ export const SideBarData = [
     },
     {
         title: 'Pricing',
-        path: '/signup',
+        path: '/pricing',
         icon: <BiIcons.BiMoney/>,
         cName: 'nav-text'
     },
     {
         title: 'Integration',
-        path: '/signup',
+        path: '/int',
         icon: <AiIcons.AiFillSetting/>,
         cName: 'nav-text'
     },
     {
         title: 'About',
-        path: '/signup',
+        path: '/about',
         icon: <AiIcons.AiFillRead/>,
         cName: 'nav-text'
     }
