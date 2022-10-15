@@ -66,31 +66,7 @@ const HomePage = () => {
                 </Row>
             </Container>
             </div>
-            <Container fluid>
-                <Row id='row4'>
-                    <Col className='foot' sm={4}>
-                        <h5>Community</h5>
-                        <p>Blog</p>
-                        <p>Events</p>
-                        <p>BuildTV</p>
-                        <p>Consultancy Directory</p>
-                    </Col>
-                    <Col className='foot' sm={4}>
-                        <h5>About Us</h5>
-                        <p>Team</p>
-                        <p>Jobs</p>
-                        <p>Branding Guidelines</p>
-                    </Col>
-                    <Col className='foot' sm={4}>
-                        <h5>Support</h5>
-                        <p>Help Center</p>
-                        <p>Contact Center</p>
-                        <p>System status</p>
-                    </Col>
-                </Row>
-            </Container>
-
-            
+                      
 
         </>
     )

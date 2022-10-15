@@ -12,7 +12,7 @@ const Login =()=>{
                         <div className='lg'>
                             <img src={pic2}/>
                         </div>
-                        <div id='lgForm'>
+                        <div className='lgForm'>
                             <h3 id='logTitle' className='text-center'>Log in to your Account.</h3>
                             <div className='formy'>
                                 <Form>

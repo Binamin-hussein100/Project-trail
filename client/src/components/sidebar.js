@@ -1,7 +1,7 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
-import * as IoIcons from 'react-icons/io'
+import * as BiIcons from 'react-icons/bi'
 
 
 export const SideBarData = [
@@ -28,5 +28,24 @@ export const SideBarData = [
         path: '/signup',
         icon: <AiIcons.AiOutlineLogout/>,
         cName: 'nav-text'
+    },
+    {
+        title: 'Pricing',
+        path: '/signup',
+        icon: <BiIcons.BiMoney/>,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Integration',
+        path: '/signup',
+        icon: <AiIcons.AiFillSetting/>,
+        cName: 'nav-text'
+    },
+    {
+        title: 'About',
+        path: '/signup',
+        icon: <AiIcons.AiFillRead/>,
+        cName: 'nav-text'
     }
+
 ]
