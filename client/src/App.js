@@ -9,6 +9,9 @@ import SignUp from './components/signUp';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Integration from './components/integration';
+import About from './components/about';
+import Price from './components/price';
 function App() {
   return (
     <>              
@@ -20,6 +23,9 @@ function App() {
                 <Route path='/projects' element={<Project/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/signup' element={<SignUp/>}/>
+                <Route path='/pricing' element={<Price/>}/>
+                <Route path='/int' element={<Integration/>}/>
+                <Route path='/about' element={<About/>}/>
             </Routes>
         </BrowserRouter>
         <Container fluid>
