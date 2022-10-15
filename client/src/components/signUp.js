@@ -10,7 +10,7 @@ const SignUp = () =>{
             <div className='signup'>
                 <div>
                     <div className='lg'>
-                        <img src={pic3}/>
+                        <img src={pic3} alt='Sign up'/>
                     </div>
                 </div>
                 <div className='lgForm'>
