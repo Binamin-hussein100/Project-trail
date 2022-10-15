@@ -5,36 +5,45 @@ import Row from 'react-bootstrap/Row';
 import pic from '../images/organize.jpg'
 import pic1 from '../images/office.jpg'
 import * as GrIcons from 'react-icons/gr'
-import Button from 'react-bootstrap/Button';
-
-import SignUp from './signUp';
-
+import { Button } from 'react-bootstrap';
 
 const HomePage = () => {
     return (
         <>
     
+            <div id='home'>
             <Container className='homepView'>
                 <Row id='row1' >
                     <Col sm={6}>
                         
                        <img src={pic} alt='Project manager'/>
-                       <div className='login'>
-                            <Button className='login' variant='outline-dark'>Log in</Button>
-                            
+                       <div className='login'>                          
                        </div>
                     </Col>
                     <Col sm={6} id="display" >
+                        <p>
+                            
+                        </p>
                     <div className='text-center' id='launchD'>
-                        <h3 id='launch'>WELCOME TO PROJECT ALLIANCE <GrIcons.GrLaunch/></h3>
-                        <p>Project planning taken to the next level.</p>
-                        <h4><u><u>Sign Up</u></u></h4>
-                        <SignUp />
+                        <h1 id='plan'>PLAN BEYONG LIMITS  <GrIcons.GrLaunch/></h1>                       
+                    </div>
+                    <div id='getStarted'>
+                        <h3 className='text-center'>
+                            Get started today!                       
+                        </h3>
+                        <div className='optio'>
+                            <div>                              
+                                <Button variant='outline-dark'>Add task</Button>
+                            </div>
+                            <div>
+                               <Button variant='outline-dark'>Start project</Button>
+                            </div>
+                        </div>
                     </div>
                     </Col> 
                 </Row>                
             </Container>
-            <Container id='intro'>
+            <Container className='text-center' id='intro'>
                 <Row>
                     <Col sm={12}>
                     <h3>Proven project management for successful teams</h3>
@@ -56,6 +65,7 @@ const HomePage = () => {
                     </Col>
                 </Row>
             </Container>
+            </div>
             <Container fluid>
                 <Row id='row4'>
                     <Col className='foot' sm={4}>
