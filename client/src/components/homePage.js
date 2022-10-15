@@ -7,6 +7,8 @@ import pic1 from '../images/office.jpg'
 import * as GrIcons from 'react-icons/gr'
 import Button from 'react-bootstrap/Button';
 
+import SignUp from './signUp';
+
 
 const HomePage = () => {
     return (
@@ -17,25 +19,17 @@ const HomePage = () => {
                     <Col sm={6}>
                         
                        <img src={pic} alt='Project manager'/>
-                       <div>
-                            <Button variant='outline-dark'>Log in</Button>
-                            <Button variant='outline-dark'>Sign up</Button>
+                       <div className='login'>
+                            <Button className='login' variant='outline-dark'>Log in</Button>
+                            
                        </div>
                     </Col>
                     <Col sm={6} id="display" >
                     <div className='text-center' id='launchD'>
                         <h3 id='launch'>WELCOME TO PROJECT ALLIANCE <GrIcons.GrLaunch/></h3>
                         <p>Project planning taken to the next level.</p>
-                        {/* <div>
-                            <h1 >Get started today!</h1>
-                           
-                            <form>
-                                <label>Sign up with your Email </label>
-                                <input className='' placeholder='email@domail.com' />
-                                <Button variant='outline-dark'>Get started!</Button>
-                            </form>
-                        </div> */}
-                        
+                        <h4><u><u>Sign Up</u></u></h4>
+                        <SignUp />
                     </div>
                     </Col> 
                 </Row>                

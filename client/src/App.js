@@ -4,6 +4,7 @@ import HomePage from './components/homePage';
 import Navigation from './components/navbar';
 import Project from './components/project';
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
+import Login from './components/login';
 function App() {
   return (
     <>              
@@ -24,6 +25,7 @@ function App() {
             <Routes>
                 <Route path='/' exact element={<HomePage/>}/>
                 <Route path='/projects' element={<Project/>}/>
+                <Route path='/login' element={<Login/>}/>
             </Routes>
         </BrowserRouter>
             

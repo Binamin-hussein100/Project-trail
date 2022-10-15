@@ -19,7 +19,7 @@ export const SideBarData = [
     },
     {
         title: 'Settings',
-        path: '/',
+        path: '/login',
         icon: <AiIcons.AiFillSetting/>,
         cName: 'nav-text'
     },

@@ -112,13 +112,13 @@ span {
 
 /* HomePage */
 .homepView{
-    height: 89vh;
+    min-height:89vh;
     position: relative;
 }
 
 #row1{
   border: #000000 0px solid;
-  height: 60vh;
+  height: 80%;
   position: absolute;
   left: 0;
   top: 0;
@@ -248,4 +248,18 @@ span {
 
 ul{
   list-style-type: none;
+}
+
+.login{
+  align-items: center;
+  text-align: center;
+}
+
+#btn{
+  margin-top: 2%;
+}
+
+#signin{
+  border: #000000 1px solid;
+  border-radius: 1em;
 }
