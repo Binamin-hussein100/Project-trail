@@ -17,12 +17,12 @@ const Price = () => {
                             <h5 className='text-center'>$0</h5>
                             <Button  className='btn2' variant="outline-primary" disabled>Get Started</Button>
                             <ul>
-                                <li >Unlimited Core features</li>
-                                <li>Unlimited read-only seats</li>
-                                <li>5 project limits</li>
-                                <li>No free trial</li>
-                                <li disabled>free</li>
-                                <li>No full project history</li>
+                                <li className='pi'>Unlimited Core features</li>
+                                <li className='pi'>Unlimited read-only seats</li>
+                                <li className='pi'>5 project limits</li>
+                                <li className='pi'>No free trial</li>
+                                <li className='pi' disabled>free</li>
+                                <li className='pi'>No full project history</li>
                             </ul>
                         </div>
                     </Col>
@@ -34,12 +34,12 @@ const Price = () => {
                             <h5 className='text-center'>$10</h5>
                             <Button  className='btn2' variant="outline-primary">Start free trial</Button>
                             <ul>
-                                <li >Unlimited Core features</li>
-                                <li>Unlimited read-only seats</li>
-                                <li>Unlimited project limits</li>
-                                <li>30-days free trial</li>
-                                <li disabled>Flat rate</li>
-                                <li>No full project history</li>
+                                <li className='pi'>Unlimited Core features</li>
+                                <li className='pi'>Unlimited read-only seats</li>
+                                <li className='pi'>Unlimited project limits</li>
+                                <li className='pi'>30-days free trial</li>
+                                <li className='pi' disabled>Flat rate</li>
+                                <li className='pi'>No full project history</li>
                             </ul>
                         </div>
                     </Col>
@@ -51,12 +51,12 @@ const Price = () => {
                             <h5 className='text-center'>$50</h5>
                             <Button  className='btn2' variant="outline-primary">Start free trial</Button>
                             <ul>
-                                <li >Unlimited Core features</li>
-                                <li>Unlimited read-only seats</li>
-                                <li>Unlimited project limits</li>
-                                <li>30-days free trial</li>
-                                <li disabled>Bundled collaboration</li>
-                                <li>No full project history</li>
+                                <li className='pi'>Unlimited Core features</li>
+                                <li className='pi'>Unlimited read-only seats</li>
+                                <li className='pi'>Unlimited project limits</li>
+                                <li className='pi'>30-days free trial</li>
+                                <li className='pi' disabled>Bundled collaboration</li>
+                                <li className='pi'>No full project history</li>
                             </ul>
                         </div>
                     </Col>
@@ -68,12 +68,12 @@ const Price = () => {
                             <h5 className='text-center'>Custom</h5>
                             <Button  className='btn2' variant="outline-primary">Let's talk</Button>
                             <ul>
-                                <li >Unlimited Core features</li>
-                                <li>Unlimited read-only seats</li>
-                                <li>Unlimited project limits</li>
-                                <li>30-days free trial</li>
-                                <li >Custom</li>
-                                <li>Full project history</li>
+                                <li className='pi'>Unlimited Core features</li>
+                                <li className='pi'>Unlimited read-only seats</li>
+                                <li className='pi'>Unlimited project limits</li>
+                                <li className='pi'> 30-days free trial</li>
+                                <li className='pi'>Custom</li>
+                                <li className='pi'>Full project history</li>
                             </ul>
                         </div>
                     </Col>
