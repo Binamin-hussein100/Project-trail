@@ -22,7 +22,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
 
     private
     def user_params
-        params.permit(:username, :phone_number :password, :password_confirmation,)
+        params.permit(:username, :phone_number, :password, :password_confirmation)
     end
 
     def handle_blanks(invalid)
