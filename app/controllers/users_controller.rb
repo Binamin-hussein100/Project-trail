@@ -10,7 +10,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
         end
     end
 
-    def created
+    def create
         user = User.create!(user_params)
         if user.valid?
             session[:user_id] = user.id
