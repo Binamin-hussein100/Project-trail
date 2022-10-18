@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from 'react';
 import HomePage from './components/homePage';
 import Navigation from './components/navbar';
 import Project from './components/project';
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Login from './components/login';
-import SignUp from './components/signUp';
+import SignUp from './components/signUpForm';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -13,15 +14,30 @@ import Integration from './components/integration';
 import About from './components/about';
 import Price from './components/price';
 function App() {
+    const [user, setUser] = useState(null)
+
+    // const log = () => setShowLogin(true)
+    
+    useEffect(() => {
+        fetch("/me")
+        .then((res)=>{
+            if(res.ok){
+                res.json().then((user)=> setUser(user))
+            }
+        })
+    },[]);
+
+    if(!user) return <Login onLogin={setUser}/>
+
   return (
-    <>              
+    <>        
                
         <BrowserRouter>
-        <Navigation/>
+        <Navigation user = {user} setUser={setUser}/>
             <Routes>
                 <Route path='/' exact element={<HomePage/>}/>
-                <Route path='/projects' element={<Project/>}/>
-                <Route path='/login' element={<Login/>}/>
+                <Route path='/projects' element={<Project user={user}/>}/>
+                <Route path='/login' element={<Login />}/>
                 <Route path='/signup' element={<SignUp/>}/>
                 <Route path='/pricing' element={<Price/>}/>
                 <Route path='/int' element={<Integration/>}/>
