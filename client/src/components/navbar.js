@@ -3,20 +3,33 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import  {SideBarData}   from './sidebar'
+import Button from "react-bootstrap/Button"
 
 
-const Navigation = () => {
+
+const Navigation = ({user, setUser}) => {
     const [sidebar, setSidebar] = useState(false)
-
     const showSidebar = () => setSidebar(!sidebar)
+
+    function handleLogoutClick(){
+        fetch("/logout",{method: "DELETE"})
+        .then((r)=>{
+            if(r.ok){
+                setUser(null)    
+            }
+        })
+
+    }
 
     return (
          <>
             <div fixed='top' className='navbar'>
+                
                 <Link to='#' className='menu_bars'>
                     <FaIcons.FaBars onClick={showSidebar}/>
+                    <h3 id='logo'><span id='pj'>Abo</span>Jani</h3>
                 </Link>
-                <h3 id='logo'><span id='pj'>Abo</span>Jani</h3>
+                
             </div>
             <nav className={sidebar ? 'nav-menu active':'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
@@ -35,9 +48,17 @@ const Navigation = () => {
                             </li>
                         )
                     })}
-                </ul>
-                <p>done</p>
+                    <li>
+                        <Button variant="outline-danger" onClick={handleLogoutClick}>
+
+                            < AiIcons.AiOutlineLogout /> 
+                            Log Out
+                        </Button>
+                    </li>
+                </ul> 
+                              
             </nav>
+            
             
          </>
     )
