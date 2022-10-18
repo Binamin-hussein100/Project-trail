@@ -1,41 +1,41 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import pic2 from '../images/unlock.jpg'
+import React, {useState} from 'react';
+import LoginForm from './loginForm';
+import SignUpForm from './signUpForm';
+import Button from "react-bootstrap/Button"
 
 
-const Login =()=>{
-    return (
-            <>
-                <div className='loginView'>
-                    <div className='signin'>
-                        <div className='lg'>
-                            <img src={pic2} alt='log in'/>
-                        </div>
-                        <div className='lgForm'>
-                            <h3 id='logTitle' className='text-center'>Log in to your Account.</h3>
-                            <div className='formy'>
-                                <Form>
-                                    <Form.Group>
-                                        <Form.Label>Username:</Form.Label>
-                                        <Form.Control type='text'/>
-                                    </Form.Group>
-                                    <Form.Group>
-                                        <Form.Label>Password:</Form.Label>
-                                        <Form.Control type='password'/>
-                                    </Form.Group>
-                                    <Button id='signinSub' className='text-center' variant='outline-dark'>Sign in</Button>
-                                </Form>
-                            </div>
-                            <div id='dha' className='text-center'>
-                                <h5>Don't have an Account? Sign Up</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
+const Login = ({onLogin}) => {
+  const [showLogin, setShowLogin] = useState(true)
+
+   
+    return(
+        <div>
+            {showLogin ? (
+              <>
+                <LoginForm onLogin={onLogin}/>
+                
+                <p>
+                Don't have an account? &nbsp;
+                <Button variant="outline-secondary" onClick={() => setShowLogin(false)}>
+                  Sign Up
+                </Button>
+              </p>
+                
+              </> 
+            ) : (
+              <>
+                <SignUpForm onLogin={onLogin}/>
+                
+                <p>
+                Already have an account? &nbsp;
+                <Button variant="outline-secondary" onClick={() => setShowLogin(true)}>
+                  Log In
+                </Button>
+              </p>
+              </>
+            )}
+      </div>
     )
 }
 
-export default Login;
-
+export default Login
