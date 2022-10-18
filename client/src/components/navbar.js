@@ -51,7 +51,7 @@ const Navigation = ({user, setUser}) => {
                     <li>
                         <Button variant="outline-danger" onClick={handleLogoutClick}>
 
-                            < AiIcons.AiOutlineLogout /> 
+                            <AiIcons.AiOutlineLogout /> 
                             Log Out
                         </Button>
                     </li>
