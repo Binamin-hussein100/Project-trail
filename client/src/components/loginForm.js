@@ -19,7 +19,10 @@ const LoginForm =({ onLogin })=>{
             body: JSON.stringify({username, password}),
         }).then((r)=>{
             if(r.ok){
-                r.json().then((user)=>onLogin(user))
+                r.json().then((user)=>{
+                    console.log(user)
+                    onLogin(user)
+                })
             }
         })
     }
@@ -37,11 +40,11 @@ const LoginForm =({ onLogin })=>{
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group>
                                         <Form.Label>Username:</Form.Label>
-                                        <Form.Control autoComplete='off' value={username} type='text'/>
+                                        <Form.Control autoComplete='off' value={username} onChange={(e)=>setUsername(e.target.value)} type='text'/>
                                     </Form.Group>
                                     <Form.Group>
                                         <Form.Label>Password:</Form.Label>
-                                        <Form.Control value={password} type='password'/>
+                                        <Form.Control value={password} onChange={(e)=>setPassword(e.target.value)} type='password'/>
                                     </Form.Group>
                                     <Button type='submit' id='signinSub' className='text-center' variant='outline-dark'>Sign in</Button>
                                 </Form>
