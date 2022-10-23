@@ -16,7 +16,6 @@ import Price from './components/price';
 function App() {
     const [user, setUser] = useState(null)
 
-    // const log = () => setShowLogin(true)
     
     useEffect(() => {
         fetch("/me")
