@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :tasks, only: [:index, :create , :update, :show, :destory]
-  resources :projects ,only: [:index, :create , :update, :show, :destory]
+  resources :projects
   resources :users ,only: [:index, :create, :update, :show, :destory]
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   post "/projects", to: "projects#index"
   post "/projects", to: "projects#create"
-
+  
 
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
