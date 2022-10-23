@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 project = Project.create(title: "Car_treck", description: "E-commercefor Cars", user_id:1)
+project = Project.create(title: "T4turf", description: "Turf booking website", user_id:2)
