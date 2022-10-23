@@ -7,9 +7,9 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
     end
 
     def show
-        user = User.find_by(id: session[:user_id]) 
-        if user
-            render json: user, status: :created
+        current_user = User.find_by(session[:user_id]) 
+        if current_user
+            render json: current_user, status: :created
         else 
             render json: {error: "Not authorised"}, status: :unauthorized
         end
@@ -18,7 +18,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
     def create
         user = User.create!(user_params)
         if user.valid?
-            session[:user_id] = user.id
+            session[:user_id] = @user.id
             render json: user, status: :created
         else            
             render json: {error: user.errors.full_messages}, status: :unprocessable_entity
