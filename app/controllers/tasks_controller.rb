@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
 
-    before_action :authorize
+    # before_action :authorize
     def index
         tasks = Task.all 
         render json: tasks, status: :created
