@@ -28,7 +28,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blanks
 
     private
     def project_params
-        params.permit(:title, :description, :user)
+        params.permit(:title, :description, :user_id )
     end
 
     def handle_blanks(invalid)
