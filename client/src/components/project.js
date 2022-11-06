@@ -5,30 +5,32 @@ import Col from "react-bootstrap/Col";
 import * as BsIcons from "react-icons/bs";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import AddProject from '../components/addproject';
 
 
 
-const Project = ()=>{
+
+const Project = ({user})=>{
     const [projects, setProjects] = useState([])
+    const [modalShow, setModalShow] = useState(false)
 
     useEffect(()=>{
         fetch("/projects")
         .then((res)=>res.json())
         .then((dta)=>{
             // setProjects([...projects, dta])});
-            setProjects(dta)})
+            setProjects(dta)})  
     },[])
-    console.log(projects.length)
-    console.log(projects)
 
-    const handleDeleteProject = (id) => {
-        
+    const handleDeleteProject = (id) => {        
             fetch(`/projects/${id}`,{
                 method: 'DELETE',
-            })
-    }
+            })}
+            
 
-
+    const filterData = projects.filter(project =>{
+        return project.user.id === user.id
+    })
 
     return (
         <div>
@@ -37,41 +39,26 @@ const Project = ()=>{
                         <Row>
                             <Col sm={4}></Col>
                             <Col sm={6}>
-                                <h2>Hello, Binamin ({projects.length})</h2>
+                                <h2>Hello, {user.username} ({`All projects: ${filterData.length}`})</h2>
 
                             </Col>
-                            <Col sm={2}></Col>
+                            <Col  sm={2}></Col>
                         </Row>
                     </Container>
                     
-                    <Container id="tasks" className="cont1">
-                            <h3 id="priority">Priorities  <span><BsIcons.BsFillPlusCircleFill /></span></h3>
+                 
+                        <Container  id="project" className="cont2">
+                            <h3 id="prj">Projects <span><BsIcons.BsFillPlusCircleFill onClick={()=> setModalShow(true)}/></span></h3>
+                            <AddProject user= {user} show={modalShow} onHide={()=>setModalShow(false)}/>
                             <Row>
-                                <Col sm={12}><u>All projects</u></Col>
-                                
-                                
-                            </Row>
-                        </Container>
-                        <Container id="project" className="cont2">
-                            <h3 id="prj">Projects <span><BsIcons.BsFillPlusCircleFill /></span></h3>
-                            <Row>
-                                <Col sm={7}>
-                              
-                                    {/* <Card>
-                                        <Card.Header>Binamin</Card.Header>
-                                        <Card.Body>
-                                            <Card.Title>title</Card.Title>
-                                            <Card.Text>description</Card.Text>
-                                            <Button>DELETE</Button>
-                                            <Button>UPDATE</Button>
-                                        </Card.Body>
-                                    </Card> */}
+                                <Col id="allCards" className="d-flex flex-wrap" sm={12}>
+
                         
-                                    <ul>                                        
-                                        {projects?.map(prj=>(
-                                            <li key={prj.id}>
+                                    <ul id="listy">                                        
+                                        {filterData?.map(prj=>(
+                                            <li id="singCard" key={prj.id}>
                                                
-                                                <Card border="dark">
+                                                <Card  border="dark">
                                                 <Card.Header>{prj.user.username}</Card.Header>
                                                 <Card.Body>
                                                     <Card.Title>{prj.title}</Card.Title>
@@ -94,7 +81,17 @@ const Project = ()=>{
 
                                 </Col>
                             </Row>
-                        </Container><Container id="goals" className="cont1">
+                        </Container>
+                        <Container id="tasks" className="cont1">
+                            <h3 id="priority">Priorities  <span><BsIcons.BsFillPlusCircleFill /></span></h3>
+
+                            <Row>
+                                <Col sm={12}><u>All projects</u></Col>
+                                
+                                
+                            </Row>
+                        </Container>
+                        <Container id="goals" className="cont1">
                             <h3 id="prj">Goals<span><BsIcons.BsFillPlusCircleFill /></span></h3>
                             <Row>
                                 <Col>
