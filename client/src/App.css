@@ -230,17 +230,19 @@ span {
 
 #project{
   border: #000000 0px solid;
-  height: 45vh;
+  height: auto;
   padding: 1%;
   border-radius: 1em;
   box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
   margin-top: 5%;
+
+
 }
 
 #goals{
   border: #000000 0px solid;
   height: 45vh;
-  padding: 1%;
+  padding: 3%;
   border-radius: 1em;
   box-shadow: 0px 7px 20px rgba(15, 8, 43, 0.2);
   margin-top: 5%;
@@ -422,4 +424,15 @@ img{
     background-color: rgba(0, 0, 0, 0.76);}
   
 
+}
+
+#listy{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+#singCard{
+    margin: 1%;
+    padding: 1%;
 }
