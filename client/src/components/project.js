@@ -6,6 +6,8 @@ import * as BsIcons from "react-icons/bs";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import AddProject from '../components/addproject';
+import EditProject from "../components/editProject";
+import Task from "../components/task";
 
 
 
@@ -13,6 +15,7 @@ import AddProject from '../components/addproject';
 const Project = ({user})=>{
     const [projects, setProjects] = useState([])
     const [modalShow, setModalShow] = useState(false)
+    const [updateForm, setUpdateForm] = useState(false)
 
     useEffect(()=>{
         fetch("/projects")
@@ -65,7 +68,8 @@ const Project = ({user})=>{
                                                     <Card.Text>{prj.description}</Card.Text>
                                                     <div className='optio'>
                                                     <div>                              
-                                                        <Button variant='outline-dark'>UPDATE</Button>
+                                                        <Button variant='outline-dark' onClick={()=> setUpdateForm(true)}>UPDATE</Button>
+                                                        <EditProject onHide = {()=>setUpdateForm(false)} show={updateForm} user = {user} /> 
                                                     </div>
                                                     <div>
                                                         <Button variant='outline-danger' onClick={() => handleDeleteProject(prj.id)}>DELETE</Button>
@@ -83,22 +87,23 @@ const Project = ({user})=>{
                             </Row>
                         </Container>
                         <Container id="tasks" className="cont1">
-                            <h3 id="priority">Priorities  <span><BsIcons.BsFillPlusCircleFill /></span></h3>
+                            <h3 id="priority">Priorities</h3>
 
                             <Row>
-                                <Col sm={12}><u>All projects</u></Col>
-                                
+                                <Col sm={12}><u>From All projects</u></Col>
+                                <Task />
                                 
                             </Row>
                         </Container>
-                        <Container id="goals" className="cont1">
+                        {/* <Container id="goals" className="cont1">
                             <h3 id="prj">Goals<span><BsIcons.BsFillPlusCircleFill /></span></h3>
                             <Row>
                                 <Col>
 
                                 </Col>
                             </Row>
-                        </Container></>
+                        </Container> */}
+                        </>
              
             </ul>
         </div>
