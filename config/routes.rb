@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   post "/projects", to: "projects#index"
   post "/projects", to: "projects#create"
+  post "/task", to: "tasks#create"
+  get "/tasks", to: "tasks#index"
+  
+
   
 
 
