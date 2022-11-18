@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import AddProject from '../components/addproject';
 import EditProject from "../components/editProject";
 import Task from "../components/task";
+import { FaBullseye } from "react-icons/fa";
+import EditTask from "../components/editTask";
 
 
 
@@ -16,7 +18,10 @@ const Project = ({user})=>{
     const [projects, setProjects] = useState([])
     const [modalShow, setModalShow] = useState(false)
     const [updateForm, setUpdateForm] = useState(false)
+    const [addTask, setAddTask] = useState(false)
+    const [task, setTask] = useState([])
 
+ 
     useEffect(()=>{
         fetch("/projects")
         .then((res)=>res.json())
@@ -87,11 +92,11 @@ const Project = ({user})=>{
                             </Row>
                         </Container>
                         <Container id="tasks" className="cont1">
-                            <h3 id="priority">Priorities</h3>
-
+                            <h3 id="priority">Priorities <span><BsIcons.BsFillPlusCircleFill onClick={()=>setAddTask(true)}/></span> </h3>
+                            <EditTask show={addTask} user= {user}  onHide={()=>setAddTask(false)}/>
                             <Row>
                                 <Col sm={12}><u>From All projects</u></Col>
-                                <Task />
+                                <Task/>
                                 
                             </Row>
                         </Container>
