@@ -19,7 +19,7 @@ const Project = ({user})=>{
     const [modalShow, setModalShow] = useState(false)
     const [updateForm, setUpdateForm] = useState(false)
     const [addTask, setAddTask] = useState(false)
-    const [task, setTask] = useState([])
+    
 
  
     useEffect(()=>{
