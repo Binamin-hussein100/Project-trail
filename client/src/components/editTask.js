@@ -26,6 +26,8 @@ const EditTask = (props) =>{
             })
         })
         alert("Task Successfully added.")
+        window.location.reload()
+
     }
 
     const handleChange = (e) => {
