@@ -37,9 +37,9 @@ const Task = (props)=>{
                         <h3>{i.name}</h3>
                         <h5>{i.description}</h5>                        
                         <div id='btns'>                              
-                            <Button variant='outline-dark' onClick={()=> setTskUpdate(true)}>UPDATE</Button>
-                            <UpdateTask onHide = {()=>setTskUpdate(false)} show={tskUpdate} user = {props.user} /> 
-                            <ImIcons.ImCancelCircle variant='outline-danger' onClick={() => handleDeleteTask(i.id)}>DELETE</ImIcons.ImCancelCircle>
+                            <Button className='updt' variant='outline-dark' onClick={()=> setTskUpdate(true)}>UPDATE</Button>
+                            <UpdateTask  onHide = {()=>setTskUpdate(false)} show={tskUpdate} user = {props.user} /> 
+                            <ImIcons.ImCancelCircle  variant='outline-danger' onClick={() => handleDeleteTask(i.id)}>DELETE</ImIcons.ImCancelCircle>
                         </div>
                     </div>
                </li>
