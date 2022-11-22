@@ -9,7 +9,7 @@ import AddProject from '../components/addproject';
 import EditProject from "../components/editProject";
 import Task from "../components/task";
 import { FaBullseye } from "react-icons/fa";
-import EditTask from "../components/editTask";
+import EditTask from "./editTask";
 
 
 
