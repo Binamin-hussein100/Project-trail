@@ -436,3 +436,16 @@ img{
     margin: 1%;
     padding: 1%;
 }
+
+#tasker{
+  width: 50%;
+  display: flex;
+  border: #000000 1px solid;
+  border-radius: 1em;
+  height: auto;
+  padding: 2%;
+}
+
+#btns{
+  justify-content: flex-end;
+}
