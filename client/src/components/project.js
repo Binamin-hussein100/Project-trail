@@ -96,7 +96,7 @@ const Project = ({user})=>{
                             <EditTask show={addTask} user= {user}  onHide={()=>setAddTask(false)}/>
                             <Row>
                                 <Col sm={12}><u>From All projects</u></Col>
-                                <Task/>
+                                <Task user={user}/>
                                 
                             </Row>
                         </Container>
