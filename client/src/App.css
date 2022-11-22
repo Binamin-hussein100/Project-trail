@@ -444,8 +444,16 @@ img{
   border-radius: 1em;
   height: auto;
   padding: 2%;
+  justify-content: space-between;
+
 }
 
 #btns{
-  justify-content: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.updt{
+  padding: 3%;
 }
