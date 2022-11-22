@@ -13,7 +13,7 @@ const EditProject = (props) => {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        fetch("/projects/id",{
+        fetch(`/projects/`,{
             method: "PUT",
             headers:{
                 'Content-Type':'application/json'
@@ -25,6 +25,8 @@ const EditProject = (props) => {
             })
         })
     }
+
+   
 
     const handleChange = (e) => {
         setprjEdit({
